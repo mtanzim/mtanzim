@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on a web application to make private equity accessible, visit us [here](https://www.moonfare.com/)
 - 🌱 I’m currently learning GraphQL, React Native, and software architecture best practices, see my [self study plan](https://github.com/users/mtanzim/projects/4), and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
-- 💬 Ask me about Python, Typescript, NodeJS, SQL
+- 💬 Ask me about Python, Typescript, React, NodeJS, SQL
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mtanzim@gmail.com)
 - ⚡ Fun facts:
   - I enjoy travel and photography: [Instagram](https://www.instagram.com/tanzim_m/?hl=en)
