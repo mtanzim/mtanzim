@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🔭 A few of my professional projects:
+- 🔭 A few of my professional contributions:
 
 | Project       | Description           | Prominent Tools  |
 | ------------- |-------------|-----|
@@ -8,7 +8,7 @@
 | [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|`Python` `Typescript` `NodeJS` `PostgreSQL` `MongoDB` `Redis` `React` `RxJS` |
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine | `Python` `AWS Lambda` `MySQL` |
   
-- :nerd_face:  I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
+- :books:  I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 - 📫  How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mailto:mtanzim@gmail.com)
 - ⚡ Fun facts:
   - I am currently trying to improve at chess :crown:
