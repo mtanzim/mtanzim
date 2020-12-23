@@ -2,8 +2,8 @@
 
 - 🔭 A few of my professional contributions:
 
-| Project       | Description           | Prominent Tools  |
-| ------------- |-------------|-----|
+| Project       | Description           |
+| ------------- |-------------|
 | [Moonfare](https://www.moonfare.com/)      | An investment platform for private equity | `Typescript` `NodeJS` `MySQL` `React` `Redux` |
 | [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|`Python` `Typescript` `NodeJS` `PostgreSQL` `MongoDB` `Redis` `React` `RxJS` |
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine | `Python` `AWS Lambda` `MySQL` |
