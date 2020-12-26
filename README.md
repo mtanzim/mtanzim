@@ -11,7 +11,7 @@
 - :books:  I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 - 📫  How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mailto:mtanzim@gmail.com)
 - ⚡ Fun facts:
-  - I am currently trying to improve at chess :crown:
+  - I am currently trying to learn chess :crown:
   - I enjoy travel and photography :camera: [Instagram](https://www.instagram.com/tanzim_m/?hl=en)
   - I was on a [podcast](https://open.spotify.com/episode/5u3gXFNGomUkKimQHE9sgG?si=Op9ZjqG-RcuyWr9Uek2TvA) discussing self studying software engineering, staying productive during long term travel, and the tech startup scene in Berlin
   
