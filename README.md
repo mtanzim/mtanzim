@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- Helping North Americans shop smarter at [Flipp](https://flipp.com/home)
+- Helping North Americans shop smarter through [Flipp](https://flipp.com/home)
 - 🔭 A few of my prior professional contributions:
 
 | Project       | Description           |
