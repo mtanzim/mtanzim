@@ -1,6 +1,7 @@
 ### Hi there 👋
 
-- 🔭 A few of my professional contributions:
+- Helping North Americans shop smarter at [Flipp](https://flipp.com/home)
+- 🔭 A few of my prior professional contributions:
 
 | Project       | Description           |
 | ------------- |-------------|
