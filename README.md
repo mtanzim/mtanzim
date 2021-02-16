@@ -1,23 +1,23 @@
 ### Hi there 👋
 
-- Helping North Americans shop smarter through [Flipp](https://flipp.com/home)
-- 🔭 A few of my prior professional contributions:
+- :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home)
+- 🔭 &nbsp; A few of my prior professional contributions:
 
 | Project       | Description           |
 | ------------- |-------------|
-| [Moonfare](https://www.moonfare.com/)      | An investment platform for private equity | `Typescript` `NodeJS` `MySQL` `React` `Redux` |
-| [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|`Python` `Typescript` `NodeJS` `PostgreSQL` `MongoDB` `Redis` `React` `RxJS` |
-| [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine | `Python` `AWS Lambda` `MySQL` |
+| [Moonfare](https://www.moonfare.com/)      | An investment platform for private equity |
+| [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|
+| [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine |
   
-- :books:  I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
-- 📫  How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mailto:mtanzim@gmail.com)
-- What I'm writing these days:
+- :books: &nbsp; I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
+- 📫  &nbsp; How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mailto:mtanzim@gmail.com)
+- :paintbrush: &nbsp; What I'm writing these days:
 <br/>
-<img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/0ab7c77e-d5ea-4750-a83c-21e8b2fc766c.svg" width="600"></img>
+<p align="center"><img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/0ab7c77e-d5ea-4750-a83c-21e8b2fc766c.svg" text-align="center" width="600"></img></p>
 
-- ⚡ Fun facts:
-  - I am currently trying to learn chess :crown:
-  - I enjoy travel and photography :camera: [Instagram](https://www.instagram.com/tanzim_m/?hl=en)
+- ⚡ &nbsp; Fun facts:
+  - I am currently trying to learn chess &nbsp;	:chess_pawn:
+  - I enjoy travel and photography &nbsp; :camera: &nbsp; [Instagram](https://www.instagram.com/tanzim_m/?hl=en)
   - I was on a [podcast](https://open.spotify.com/episode/5u3gXFNGomUkKimQHE9sgG?si=Op9ZjqG-RcuyWr9Uek2TvA) discussing self studying software engineering, staying productive during long term travel, and the tech startup scene in Berlin
   
 
