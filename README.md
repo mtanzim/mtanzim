@@ -8,12 +8,12 @@
 | [Moonfare](https://www.moonfare.com/)      | An investment platform for private equity |
 | [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine |
-  
+
 - :books: &nbsp; I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 
 - :paintbrush: &nbsp; What I'm writing these days:
 <br/>
-<p align="center"><img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/0ab7c77e-d5ea-4750-a83c-21e8b2fc766c.svg" text-align="center" width="600"></img></p>
+<p align="left"><img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/0ab7c77e-d5ea-4750-a83c-21e8b2fc766c.svg" text-align="center" width="600"></img></p>
 
 - ⚡&nbsp; Fun facts:
   - I am currently trying to learn chess &nbsp;	:chess_pawn:
