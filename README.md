@@ -11,6 +11,10 @@
   
 - :books:  I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 - 📫  How to reach me: [LinkedIn](https://www.linkedin.com/in/tanzim-mokammel), [Email](mailto:mtanzim@gmail.com)
+- What I'm writing these days:
+
+<figure><embed src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/8590b333-b02c-4070-9f65-7462ceef280b.svg"></embed></figure>
+
 - ⚡ Fun facts:
   - I am currently trying to learn chess :crown:
   - I enjoy travel and photography :camera: [Instagram](https://www.instagram.com/tanzim_m/?hl=en)
