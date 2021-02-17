@@ -13,7 +13,7 @@
 
 - :paintbrush: &nbsp; What I'm writing these days:
 <br/>
-<p align="left"><figure><embed src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/6920d182-5cd1-461b-af48-5a7758d35a82.svg"></embed></figure></p>
+<p align="left"><img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/8dacbea1-93bd-4e86-9bbd-7fc89784cedb.svg"></imge></p>
 
 - ⚡&nbsp; Fun facts:
   - I am currently trying to learn chess &nbsp;	:chess_pawn:
