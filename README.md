@@ -12,8 +12,9 @@
 - :books: &nbsp; I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 
 - :paintbrush: &nbsp; What I'm writing these days:
-<br/>
-<p align="left"><img src="https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/8dacbea1-93bd-4e86-9bbd-7fc89784cedb.svg"></imge></p>
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 - ⚡&nbsp; Fun facts:
   - I am currently trying to learn chess &nbsp;	:chess_pawn:
