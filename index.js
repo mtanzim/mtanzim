@@ -7,7 +7,7 @@ const apiKey = process.env.PLOTLY_KEY;
 const apiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(apiUser, apiKey);
 
-function plotData(data) {
+function makePlot(data) {
   const plotData = {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent),
@@ -53,11 +53,11 @@ function prepareData(data) {
   return preparedData;
 }
 
-async function fetchData() {
+async function main() {
   const res = await fetch(url);
   const { data } = await res.json();
   console.log(data);
-  plotData(prepareData(data));
+  makePlot(prepareData(data));
 }
 
-fetchData();
+main();
