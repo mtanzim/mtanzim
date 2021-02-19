@@ -22,8 +22,8 @@ function makePlot(data) {
   const figure = {
     data: [plotData],
     layout: {
-      plot_bgcolor: "black",
-      paper_bgcolor: "#FFF3",
+      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(0,0,0,0)",
     },
   };
   var imgOpts = {
