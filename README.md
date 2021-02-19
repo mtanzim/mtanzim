@@ -9,11 +9,11 @@
 | [Diginex Access](https://www.diginex.com/diginex-access/)| A cryptocurrency data aggregation and trading platform|
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine |
 
-- :books: &nbsp; I strive for continious learning: see my [self study plan](https://github.com/users/mtanzim/projects/4◊) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
+- :books: &nbsp; I strive for continuous learning: see my [self study plan](https://github.com/users/mtanzim/projects/4◊) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 
 - :paintbrush: &nbsp; What I'm writing these days:
 
-![alt text](wakaTime.png "Title")
+![alt text](waka.png "Title")
 
 - ⚡&nbsp; Fun facts:
   - I am currently trying to learn chess &nbsp;	:chess_pawn:
