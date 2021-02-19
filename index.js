@@ -19,6 +19,7 @@ function makePlot(data, fileName) {
       colors: data.map((d) => d.color),
     },
   };
+  console.log("Plot Data");
   console.log(plotData);
   const figure = {
     data: [plotData],
@@ -55,22 +56,51 @@ function prepareData(data) {
   return preparedData;
 }
 
-async function main() {
-  const res = await fetch(url);
-  const { data } = await res.json();
-  console.log(data);
-  const ts = Date.now();
-  const fileName = `waka${ts}.png`;
-  makePlot(prepareData(data), fileName);
-  console.log(`Creating ${fileName}`);
+function updateReadme(plotFileName) {
+  const mdFile = "README.md";
+
+  fs.readFile(mdFile, "utf8", function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
+
+    const regex = /<!-- START_WAKA -->((.|\n)*)<!-- END_WAKA -->/g;
+    const replacement = `<!-- START_WAKA -->
+    ![Language Statistics](${plotFileName} "Languages")
+    <!-- END_WAKA -->
+    `;
+    var result = data.replace(regex, replacement);
+
+    fs.writeFile(mdFile, result, "utf8", function (err) {
+      if (err) return console.log(err);
+    });
+  });
+}
+
+function removeOldImages(plotFileName) {
   fs.readdirSync(".")
     .filter((f) => f.includes(".png"))
     .forEach((file) => {
-      if (file !== fileName) {
+      if (file !== plotFileName) {
         console.log(`Removing ${file}`);
         fs.unlinkSync(`./${file}`);
       }
     });
+}
+
+async function main() {
+  const res = await fetch(url);
+  const { data } = await res.json();
+  console.log("API Data");
+  console.log(data);
+  const ts = Date.now();
+  const fileName = `waka${ts}.png`;
+  console.log(`Creating plot in ${fileName}`);
+  makePlot(prepareData(data), fileName);
+  console.log(`Removing old images`);
+  removeOldImages(fileName);
+  console.log(`Updating readme`);
+  updateReadme(fileName);
 }
 
 main();
