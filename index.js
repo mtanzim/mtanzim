@@ -32,7 +32,7 @@ function makePlot(data, fileName) {
       paper_bgcolor: "rgba(0,0,0,0)",
     },
   };
-  var imgOpts = {
+  const imgOpts = {
     format: "png",
     width: 500,
     height: 500,
@@ -72,7 +72,7 @@ function updateReadme(plotFileName) {
     const replacement = `<!-- START_WAKA -->
     ![Language Statistics](${plotFileName} "Languages")
     <!-- END_WAKA -->`;
-    var result = data.replace(regex, replacement);
+    const result = data.replace(regex, replacement);
 
     fs.writeFile(mdFile, result, "utf8", function (err) {
       if (err) return console.log(err);
