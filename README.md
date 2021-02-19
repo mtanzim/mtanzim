@@ -13,11 +13,7 @@
 
 - :paintbrush: &nbsp; What I'm writing these days:
   <!-- START_WAKA -->
-<<<<<<< HEAD
     ![Language Statistics](waka1613741900105.png "Languages")
-=======
-    ![Language Statistics](waka1613714575890.png "Languages")
->>>>>>> 47645fcc5208b6a45f5cd6c7b480d413dc1a7353
     <!-- END_WAKA -->
 
 - ⚡&nbsp; Fun facts:
