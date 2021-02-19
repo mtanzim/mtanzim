@@ -8,7 +8,7 @@ const url = process.env.WAKATIME_URL;
 
 const plotly = require("plotly")(apiUser, apiKey);
 
-function makePlot(data) {
+function makePlot(data, fileName) {
   const plotData = {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent),
@@ -34,7 +34,8 @@ function makePlot(data) {
   };
   plotly.getImage(figure, imgOpts, function (err, imageStream) {
     if (err) return console.log(err);
-    const fileStream = fs.createWriteStream("waka.png");
+
+    const fileStream = fs.createWriteStream(fileName);
     imageStream.pipe(fileStream);
   });
 }
@@ -58,7 +59,18 @@ async function main() {
   const res = await fetch(url);
   const { data } = await res.json();
   console.log(data);
-  makePlot(prepareData(data));
+  const ts = Date.now();
+  const fileName = `waka${ts}.png`;
+  makePlot(prepareData(data), fileName);
+  console.log(`Creating ${fileName}`);
+  fs.readdirSync(".")
+    .filter((f) => f.includes(".png"))
+    .forEach((file) => {
+      if (file !== fileName) {
+        console.log(`Removing ${file}`);
+        fs.unlinkSync(`./${file}`);
+      }
+    });
 }
 
 main();
