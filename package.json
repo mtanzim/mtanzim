@@ -6,5 +6,20 @@
   },
   "scripts": {
     "start": "node ."
-  }
+  },
+  "name": "mtanzim",
+  "description": "- :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home) - 🔭 &nbsp; A few of my prior professional contributions:",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtanzim/mtanzim.git"
+  },
+  "author": "Tanzim Mokammel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtanzim/mtanzim/issues"
+  },
+  "homepage": "https://github.com/mtanzim/mtanzim#readme"
 }
