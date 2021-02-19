@@ -13,7 +13,7 @@
 
 - :paintbrush: &nbsp; What I'm writing these days:
 
-![alt text](waka.png "Title")
+![alt text](wakaTime.png "Title")
 
 - ⚡&nbsp; Fun facts:
   - I am currently trying to learn chess &nbsp;	:chess_pawn:
