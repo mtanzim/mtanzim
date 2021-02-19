@@ -13,8 +13,12 @@
 
 - :paintbrush: &nbsp; What I'm writing these days:
   <!-- START_WAKA -->
-    ![Language Statistics](waka1613709215005.png "Languages")
+    ![Language Statistics](waka1613709886450.png "Languages")
     <!-- END_WAKA -->
+    
+    
+    
+    
     
 
 - ⚡&nbsp; Fun facts:

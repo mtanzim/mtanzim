@@ -11,7 +11,7 @@ const plotly = require("plotly")(apiUser, apiKey);
 function makePlot(data, fileName) {
   const plotData = {
     labels: data.map((d) => d.name),
-    values: data.map((d) => d.percent),
+    values: data.map((d) => d.percent.toFixed(1)),
     type: "pie",
     textinfo: "label+percent",
     insidetextorientation: "radial",
@@ -21,9 +21,13 @@ function makePlot(data, fileName) {
   };
   console.log("Plot Data");
   console.log(plotData);
+  const today = new Date().toISOString().slice(0, 10);
   const figure = {
     data: [plotData],
     layout: {
+      title: {
+        text: `Languages over last 7 days, since ${today}`,
+      },
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
     },
