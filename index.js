@@ -1,7 +1,11 @@
+require("dotenv").config();
+const fs = require("fs");
+
 const fetch = require("node-fetch");
-const { plot } = require("nodeplotlib");
-const url =
-  "https://wakatime.com/share/@2df932ff-33cc-42a9-a0a7-023ed4c13bfa/97adae7e-cc36-46e8-94d5-caf195f07dc8.json";
+const url = process.env.WAKATIME_URL;
+const apiKey = process.env.PLOTLY_KEY;
+const apiUser = process.env.PLOTLY_USER;
+const plotly = require("plotly")(apiUser, apiKey);
 
 function plotData(data) {
   const plotData = {
@@ -15,7 +19,23 @@ function plotData(data) {
     },
   };
   console.log(plotData);
-  plot([plotData]);
+  const figure = {
+    data: [plotData],
+    layout: {
+      plot_bgcolor: "black",
+      paper_bgcolor: "#FFF3",
+    },
+  };
+  var imgOpts = {
+    format: "png",
+    width: 500,
+    height: 500,
+  };
+  plotly.getImage(figure, imgOpts, function (err, imageStream) {
+    if (err) return console.log(err);
+    const fileStream = fs.createWriteStream("waka.png");
+    imageStream.pipe(fileStream);
+  });
 }
 
 function prepareData(data) {
