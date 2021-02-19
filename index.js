@@ -48,12 +48,12 @@ function makePlot(data, fileName) {
 function prepareData(data) {
   const MAX_COUNT = 5;
   const sortedData = data.sort((a, b) => b.percent - a.percent);
-  const topData = sortedData.slice(0, MAX_COUNT - 1);
-  const remainingPct = sortedData
-    .slice(MAX_COUNT)
-    .reduce((acc, cur) => acc + cur.percent, 0);
+  const topData = sortedData
+    .slice(0, MAX_COUNT)
+    .filter((d) => d.name !== "Other");
+  const remainingPct = 100 - topData.reduce((acc, cur) => acc + cur.percent, 0);
   const preparedData = topData.concat({
-    name: "Others",
+    name: "Other",
     percent: remainingPct,
     color: "#9467bd",
   });
