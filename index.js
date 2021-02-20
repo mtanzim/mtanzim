@@ -26,7 +26,7 @@ function makePlot(data, fileName) {
     data: [plotData],
     layout: {
       title: {
-        text: `Languages over last 7 days, since ${today}`,
+        text: `Language usage over last 7 days from ${today}`,
       },
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
