@@ -95,6 +95,9 @@ async function main() {
   const res = await fetch(url);
   const { data } = await res.json();
   console.log("API Data");
+  if (!data) {
+    throw new Error("Failed to fetch API data!");
+  }
   console.log(data);
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
