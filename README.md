@@ -13,8 +13,8 @@
 
 - :paintbrush: &nbsp; What I'm writing these days:
   <!-- START_WAKA -->
-    ![Language Statistics](waka1614743311569.png "Languages")
-    <!-- END_WAKA -->
+      ![Language Statistics](waka1614744014228.png "Languages")
+      <!-- END_WAKA -->
 
 - ⚡&nbsp; Fun facts:
   - I am currently learning chess &nbsp; :chess_pawn:
