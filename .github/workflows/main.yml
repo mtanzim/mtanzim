@@ -31,6 +31,7 @@ jobs:
         PLOTLY_KEY: ${{ secrets.PLOTLY_KEY }}
         PLOTLY_USER: ${{ secrets.PLOTLY_USER }}
         WAKATIME_URL: ${{ secrets.WAKATIME_URL }}
+        WAKA_API_KEY: ${{ secrets.WAKA_API_KEY }}
     - name: Commit and push if changed
       run: |-
         git add .
