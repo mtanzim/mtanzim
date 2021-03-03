@@ -1,5 +1,6 @@
 require("dotenv").config();
 const fs = require("fs");
+const colors = require("./colors");
 
 const fetch = require("node-fetch");
 const apiKey = process.env.PLOTLY_KEY;
@@ -91,18 +92,37 @@ function removeOldImages(plotFileName) {
     });
 }
 
+function parseData(languages) {
+  return languages.map((l) => ({
+    name: l.name,
+    percent: l.percent,
+    color: colors?.[l.name]?.color,
+  }));
+}
+
+async function fetchData() {
+  const API_KEY = process.env.WAKA_API_KEY;
+  const encoded = Buffer.from(API_KEY).toString("base64");
+  const authHeader = { Authorization: `Basic ${encoded}` };
+  const res = await fetch(url, { headers: authHeader });
+  const {
+    data: { languages },
+  } = await res.json();
+  return languages;
+}
+
 async function main() {
-  const res = await fetch(url);
-  const { data } = await res.json();
-  console.log("API Data");
+  const data = await fetchData();
   if (!data) {
     throw new Error("Failed to fetch API data!");
   }
-  console.log(data);
+  const parsed = parseData(data);
+  console.log("API Data Parsed");
+  console.log(parsed);
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
   console.log(`Creating plot in ${fileName}`);
-  makePlot(prepareData(data), fileName);
+  makePlot(prepareData(parsed), fileName);
   console.log(`Removing old images`);
   removeOldImages(fileName);
   console.log(`Updating readme`);
