@@ -12,9 +12,12 @@
 - :books: &nbsp; I strive for continuous learning: see my [self study plan](https://github.com/users/mtanzim/projects/4◊) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 
 - :paintbrush: &nbsp; What I'm writing these days:
-  <!-- START_WAKA -->
-      ![Language Statistics](waka1614744014228.png "Languages")
-      <!-- END_WAKA -->
+
+<!-- START_WAKA -->
+
+![Language Statistics](waka1614744556312.png "Languages")
+
+<!-- END_WAKA -->
 
 - ⚡&nbsp; Fun facts:
   - I am currently learning chess &nbsp; :chess_pawn:

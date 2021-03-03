@@ -10,8 +10,10 @@ function updateReadme(plotFileName) {
 
     const regex = /<!-- START_WAKA -->((.|\n)*)<!-- END_WAKA -->/g;
     const replacement = `<!-- START_WAKA -->
-      ![Language Statistics](${plotFileName} "Languages")
-      <!-- END_WAKA -->`;
+
+![Language Statistics](${plotFileName} "Languages")
+
+<!-- END_WAKA -->`;
     const result = data.replace(regex, replacement);
 
     fs.writeFile(mdFile, result, "utf8", function (err) {
