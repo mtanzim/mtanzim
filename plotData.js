@@ -9,7 +9,7 @@ function makePlot(data, fileName) {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent.toFixed(1)),
     type: "pie",
-    hole: 0.8,
+    hole: 0.7,
     textinfo: "label",
     // insidetextorientation: "radial",
     textposition: "outside",
