@@ -28,7 +28,7 @@ function makePlot(data, fileName) {
         text: `Languages used over the last 7 days`,
       },
       font: {
-        // family: "Courier New, monospace",
+        family: "Courier New, monospace",
         size: 12,
         color: "#7f7f7f",
       },
@@ -38,8 +38,8 @@ function makePlot(data, fileName) {
   };
   const imgOpts = {
     format: "png",
-    width: 375,
-    height: 375,
+    width: 500,
+    height: 500,
   };
   plotly.getImage(figure, imgOpts, function (err, imageStream) {
     if (err) return console.log(err);
