@@ -9,20 +9,24 @@ function makePlot(data, fileName) {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent.toFixed(1)),
     type: "pie",
-    textinfo: "label+percent",
-    insidetextorientation: "radial",
+    hole: 0.8,
+    textinfo: "label",
+    // insidetextorientation: "radial",
+    textposition: "outside",
+    automargin: true,
     marker: {
       colors: data.map((d) => d.color),
     },
   };
   console.log("Plot Data");
   console.log(plotData);
-  const today = new Date().toISOString().slice(0, 10);
+  // const today = new Date().toISOString().slice(0, 10);
   const figure = {
     data: [plotData],
     layout: {
+      showlegend: false,
       title: {
-        text: `Languages used over last 7 days, from ${today}`,
+        text: `Languages used over the last 7 days`,
       },
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
