@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home)
-- 🔭 &nbsp; A few of my prior professional contributions:
+- 🔭 &nbsp; A few of my prior contributions:
 
 | Project                                                                      | Description                                            |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
