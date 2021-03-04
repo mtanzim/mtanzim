@@ -6,13 +6,14 @@ const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 function makePlot(data, fileName) {
   const plotData = {
-    labels: data.map((d) => d.name),
-    values: data.map((d) => d.percent.toFixed(1)),
-    type: "pie",
-    textinfo: "label+percent",
-    insidetextorientation: "radial",
+    y: data.map((d) => d.name),
+    x: data.map((d) => d.percent.toFixed(1)),
+    type: "bar",
+    text: data.map((d) => d.percent.toFixed(1)),
+    textposition: "auto",
+    orientation: "h",
     marker: {
-      colors: data.map((d) => d.color),
+      color: data.map((d) => d.color),
     },
   };
   console.log("Plot Data");
@@ -23,6 +24,13 @@ function makePlot(data, fileName) {
     layout: {
       title: {
         text: `Languages used over last 7 days, from ${today}`,
+      },
+      yaxis: {
+        showgrid: false,
+      },
+      xaxis: {
+        showgrid: false,
+        visible: false,
       },
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
@@ -43,16 +51,16 @@ function makePlot(data, fileName) {
 
 function prepareData(data) {
   const MAX_COUNT = 5;
-  const sortedData = data.sort((a, b) => b.percent - a.percent);
-  const topData = sortedData
-    .slice(0, MAX_COUNT)
-    .filter((d) => d.name !== "Other");
+  const sortedData = data.sort((a, b) => a.percent - b.percent);
+  const topData = sortedData.slice(MAX_COUNT).filter((d) => d.name !== "Other");
   const remainingPct = 100 - topData.reduce((acc, cur) => acc + cur.percent, 0);
-  const preparedData = topData.concat({
-    name: "Other",
-    percent: remainingPct,
-    color: "#9467bd",
-  });
+  const preparedData = [
+    {
+      name: "Other",
+      percent: remainingPct,
+      color: "#9467bd",
+    },
+  ].concat(topData);
   return preparedData;
 }
 
