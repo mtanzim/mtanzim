@@ -11,7 +11,7 @@
 
 - :books: &nbsp; I strive for continuous learning: see my [self study plan](https://github.com/users/mtanzim/projects/4◊) and [ongoing side projects](https://github.com/users/mtanzim/projects/5)
 
-- :paintbrush: &nbsp; What I'm reading and writing these days:
+- :paintbrush: &nbsp; What I'm reading and writing in these days:
 
 <!-- START_WAKA -->
 
