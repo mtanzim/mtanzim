@@ -20,7 +20,6 @@ function makePlot(data, fileName) {
   };
   console.log("Plot Data");
   console.log(plotData);
-  // const today = new Date().toISOString().slice(0, 10);
   const figure = {
     data: [plotData],
     layout: {
@@ -28,14 +27,19 @@ function makePlot(data, fileName) {
       title: {
         text: `Languages used over the last 7 days`,
       },
+      font: {
+        // family: "Courier New, monospace",
+        size: 12,
+        color: "#7f7f7f",
+      },
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
     },
   };
   const imgOpts = {
     format: "png",
-    width: 500,
-    height: 500,
+    width: 375,
+    height: 375,
   };
   plotly.getImage(figure, imgOpts, function (err, imageStream) {
     if (err) return console.log(err);
