@@ -4,6 +4,9 @@ const plotlyApiKey = process.env.PLOTLY_KEY;
 const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
+const MAX_LANG_COUNT = 5;
+
+
 function makePlot(data, fileName) {
   const plotData = {
     labels: data.map((d) => d.name),
@@ -50,10 +53,9 @@ function makePlot(data, fileName) {
 }
 
 function prepareData(data) {
-  const MAX_COUNT = 5;
   const sortedData = data.sort((a, b) => b.percent - a.percent);
   const topData = sortedData
-    .slice(0, MAX_COUNT)
+    .slice(0, MAX_LANG_COUNT)
     .filter((d) => d.name !== "Other");
   const remainingPct = 100 - topData.reduce((acc, cur) => acc + cur.percent, 0);
   const preparedData = topData.concat({
