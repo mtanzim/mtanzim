@@ -1,11 +1,11 @@
 const fs = require("fs");
+const { synonyms } = require("./synonyms");
 
 const plotlyApiKey = process.env.PLOTLY_KEY;
 const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 const MAX_LANG_COUNT = 5;
-
 
 function makePlot(data, fileName) {
   const plotData = {
@@ -52,8 +52,38 @@ function makePlot(data, fileName) {
   });
 }
 
+function synonimizeData(data) {
+  // ie: JSX has a synonym: JavaScript, so it would show up in synonmymData:
+  // {"JSX":12.3}
+  const synonymData = data.filter((d) => synonyms.has(d.name));
+  // ie: Javascript gets a boost from JSX:
+  // {"JavaScript":12.3}
+  const synonymBoosts = new Map();
+  synonymData.forEach((d) =>
+    synonymBoosts.set(synonyms.get(d.name), d.percent)
+  );
+  return data
+    .map((d) => {
+      if (synonymBoosts.has(d.name)) {
+        return {
+          ...d,
+          percent: d.percent + synonymBoosts.get(d.name),
+        };
+      }
+      if (synonyms.has(d.name)) {
+        return {
+          ...d,
+          percent: 0,
+        };
+      }
+      return d;
+    })
+    .filter((d) => d.percent !== 0);
+}
+
 function prepareData(data) {
-  const sortedData = data.sort((a, b) => b.percent - a.percent);
+  const mergedData = synonimizeData(data);
+  const sortedData = mergedData.sort((a, b) => b.percent - a.percent);
   const topData = sortedData
     .slice(0, MAX_LANG_COUNT)
     .filter((d) => d.name !== "Other");
