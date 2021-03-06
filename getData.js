@@ -15,13 +15,19 @@ async function fetchData() {
   const encoded = Buffer.from(wakaApiKey).toString("base64");
   const authHeader = { Authorization: `Basic ${encoded}` };
   const res = await fetch(wakaUrl, { headers: authHeader });
+  return res.json();
+}
+
+async function fetchLanguageData() {
   const {
     data: { languages },
-  } = await res.json();
+  } = await fetchData();
+  console.log(languages);
   return languages;
 }
 
 module.exports = {
   parseData,
+  fetchLanguageData,
   fetchData,
 };

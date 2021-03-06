@@ -1,11 +1,11 @@
 require("dotenv").config();
 
-const { fetchData, parseData } = require("./getData");
+const { fetchLanguageData, parseData } = require("./getData");
 const { makePlot, prepareData } = require("./plotData");
 const { removeOldImages, updateReadme } = require("./manageFiles");
 
 async function main() {
-  const data = await fetchData();
+  const data = await fetchLanguageData();
   if (!data) {
     throw new Error("Failed to fetch API data!");
   }

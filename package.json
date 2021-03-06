@@ -1,17 +1,19 @@
 {
   "dependencies": {
     "dotenv": "^8.2.0",
+    "mongodb": "^3.6.4",
     "node-fetch": "^2.6.1",
     "plotly": "^1.0.6"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "persist": "node persist.js"
+
   },
   "name": "mtanzim",
   "description": "- :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home) - 🔭 &nbsp; A few of my prior professional contributions:",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mtanzim/mtanzim.git"
