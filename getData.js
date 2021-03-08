@@ -22,7 +22,6 @@ async function fetchLanguageData() {
   const {
     data: { languages },
   } = await fetchData();
-  console.log(languages);
   return languages;
 }
 
