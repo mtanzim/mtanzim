@@ -7,7 +7,8 @@ const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 const MAX_LANG_COUNT = 5;
 
-function makePlot(data, fileName) {
+function makePlot(parsedData, fileName) {
+  const data = prepareData(parsedData)
   const plotData = {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent.toFixed(1)),
@@ -52,7 +53,7 @@ function makePlot(data, fileName) {
   });
 }
 
-function synonimizeData(data) {
+function mergeSynonymData(data) {
   // ie: JSX has a synonym: JavaScript, so it would show up in synonmymData:
   // {"JSX":12.3}
   const synonymData = data.filter((d) => synonyms.has(d.name));
@@ -82,7 +83,7 @@ function synonimizeData(data) {
 }
 
 function prepareData(data) {
-  const mergedData = synonimizeData(data);
+  const mergedData = mergeSynonymData(data);
   const sortedData = mergedData.sort((a, b) => b.percent - a.percent);
   const topData = sortedData
     .slice(0, MAX_LANG_COUNT)
