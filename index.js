@@ -15,7 +15,7 @@ async function main() {
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
   console.log(`Creating plot in ${fileName}`);
-  makePlot(prepareData(parsed), fileName);
+  makePlot(parsed, fileName);
   console.log(`Removing old images`);
   removeOldImages(fileName);
   console.log(`Updating readme`);
