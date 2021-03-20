@@ -18,10 +18,24 @@ async function fetchData() {
   return res.json();
 }
 
-async function fetchLanguageData() {
+const MAX_TRIES = 3;
+const DELAY_BW_TRIES = 1500;
+async function fetchLanguageData(cur_try = 0) {
+  console.log(`Attempt ${cur_try} at data fetching`);
   const {
-    data: { languages },
+    data: { languages, is_up_to_date },
   } = await fetchData();
+  if (!is_up_to_date) {
+    if (cur_try > MAX_TRIES - 2) {
+      throw new Error("Cannot get fresh stats");
+    }
+    console.log(
+      `Attempt ${cur_try} at data fetching failed to fresh stats. Retrying...`
+    );
+    await new Promise((resolve, _) => setTimeout(resolve, DELAY_BW_TRIES));
+    return fetchLanguageData(cur_try + 1);
+  }
+
   return languages;
 }
 

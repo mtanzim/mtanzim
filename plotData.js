@@ -8,7 +8,7 @@ const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 const MAX_LANG_COUNT = 5;
 
 function makePlot(parsedData, fileName) {
-  const data = prepareData(parsedData)
+  const data = prepareData(parsedData);
   const plotData = {
     labels: data.map((d) => d.name),
     values: data.map((d) => d.percent.toFixed(1)),
@@ -29,7 +29,7 @@ function makePlot(parsedData, fileName) {
     layout: {
       showlegend: false,
       title: {
-        text: `Languages used over the last 7 days`,
+        text: `Languages used over the last 30 days`,
       },
       font: {
         family: "Courier New, monospace",
