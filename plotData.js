@@ -29,7 +29,7 @@ function makePlot(parsedData, fileName) {
     layout: {
       showlegend: false,
       title: {
-        text: `Languages used over the last 30 days`,
+        text: `Languages used over the last 6 months`,
       },
       font: {
         family: "Courier New, monospace",
