@@ -6,7 +6,7 @@ const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 const MAX_LANG_COUNT = 5;
-const PLOT_TITLE = 'Languages used over the last 30 days'
+const PLOT_TITLE = "Languages used over the last 30 days";
 
 function makePlot(parsedData, fileName) {
   const data = prepareData(parsedData);
@@ -55,7 +55,7 @@ function makePlot(parsedData, fileName) {
 }
 
 function mergeSynonymData(data) {
-  // ie: JSX has a synonym: JavaScript, so it would show up in synonmymData:
+  // ie: JSX has a synonym: JavaScript, so it would show up in synonymData:
   // {"JSX":12.3}
   const synonymData = data.filter((d) => synonyms.has(d.name));
   // ie: Javascript gets a boost from JSX:
@@ -73,14 +73,11 @@ function mergeSynonymData(data) {
         };
       }
       if (synonyms.has(d.name)) {
-        return {
-          ...d,
-          percent: 0,
-        };
+        return null;
       }
       return d;
     })
-    .filter((d) => d.percent !== 0);
+    .filter((d) => !!d);
 }
 
 function prepareData(data) {
