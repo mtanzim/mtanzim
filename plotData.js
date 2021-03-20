@@ -6,6 +6,7 @@ const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 const MAX_LANG_COUNT = 5;
+const PLOT_TITLE = 'Languages used over the last 30 days'
 
 function makePlot(parsedData, fileName) {
   const data = prepareData(parsedData);
@@ -29,7 +30,7 @@ function makePlot(parsedData, fileName) {
     layout: {
       showlegend: false,
       title: {
-        text: `Languages used over the last 6 months`,
+        text: PLOT_TITLE,
       },
       font: {
         family: "Courier New, monospace",
