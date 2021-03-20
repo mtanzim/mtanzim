@@ -1405,7 +1405,7 @@ const colors = {
     url: "https://github.com/trending?l=Sass",
   },
   Scala: {
-    color: "#c22d40",
+    color: "#7dd3b0",
     url: "https://github.com/trending?l=Scala",
   },
   Scaml: {
@@ -1767,6 +1767,10 @@ const colors = {
   Zimpl: {
     color: null,
     url: "https://github.com/trending?l=Zimpl",
+  },
+  Other: {
+    color: "#1f9aef",
+    url: null,
   },
 };
 

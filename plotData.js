@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { synonyms } = require("./synonyms");
+const colors = require("./colors");
 
 const plotlyApiKey = process.env.PLOTLY_KEY;
 const plotlyApiUser = process.env.PLOTLY_USER;
@@ -83,14 +84,15 @@ function mergeSynonymData(data) {
 function prepareData(data) {
   const mergedData = mergeSynonymData(data);
   const sortedData = mergedData.sort((a, b) => b.percent - a.percent);
+  const OTHER = "Other";
   const topData = sortedData
-    .slice(0, MAX_LANG_COUNT)
-    .filter((d) => d.name !== "Other");
+    .filter((d) => d.name !== OTHER)
+    .slice(0, MAX_LANG_COUNT);
   const remainingPct = 100 - topData.reduce((acc, cur) => acc + cur.percent, 0);
   const preparedData = topData.concat({
-    name: "Other",
+    name: OTHER,
     percent: remainingPct,
-    color: "#9467bd",
+    color: colors?.[OTHER]?.color,
   });
   return preparedData;
 }
