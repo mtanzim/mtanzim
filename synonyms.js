@@ -3,6 +3,7 @@ const synonyms = new Map([
   ["JSON", "Other"],
   ["YAML", "Other"],
   ["Markdown", "Other"],
+  ["Docker", "Other"],
 ]);
 
 module.exports = { synonyms };

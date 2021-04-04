@@ -19,7 +19,7 @@ async function fetchData() {
 }
 
 const MAX_TRIES = 3;
-const DELAY_BW_TRIES = 3000;
+const DELAY_BW_TRIES = 5000;
 async function fetchLanguageData(curTry = 0) {
   console.log(`Attempt ${curTry} at data fetching`);
   const {
