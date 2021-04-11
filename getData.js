@@ -1,5 +1,6 @@
 const colors = require("./colors");
 const fetch = require("node-fetch");
+const { getGuacData } = require("./guac");
 
 function parseData(languages) {
   return languages.map((l) => ({
@@ -22,9 +23,8 @@ const MAX_TRIES = 3;
 const DELAY_BW_TRIES = 5000;
 async function fetchLanguageData(curTry = 0) {
   console.log(`Attempt ${curTry} at data fetching`);
-  const {
-    data: { languages, is_up_to_date },
-  } = await fetchData();
+  const { data } = await fetchData();
+  const { languages, is_up_to_date } = data;
   if (!is_up_to_date) {
     if (curTry > MAX_TRIES - 2) {
       throw new Error("Cannot get fresh stats");
@@ -39,8 +39,34 @@ async function fetchLanguageData(curTry = 0) {
   return languages;
 }
 
+const transformGuacToWaka = (res) => {
+  const {
+    data: {
+      startDate,
+      endDate,
+      languageStats: { percentages },
+    },
+  } = res;
+  const transformed = percentages.map((l) => ({
+    name: l.language,
+    percent: l.percentage,
+  }));
+
+  console.log("Retrieved data from Guac, following are the days available");
+  console.log({ startDate, endDate });
+  return transformed;
+};
+
+async function fetchGuacData(start, end) {
+  console.log("Requesting data from Guac, following are the days requested");
+  console.log({ startDate: start, endDate: end });
+  const res = await getGuacData(start, end);
+  return transformGuacToWaka(res);
+}
+
 module.exports = {
   parseData,
   fetchLanguageData,
+  fetchGuacData,
   fetchData,
 };
