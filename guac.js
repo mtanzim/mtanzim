@@ -1,33 +1,42 @@
-const apigClientFactory = require("aws-api-gateway-client").default;
+const AWS = require("aws-sdk");
 
-const apigClient = apigClientFactory.newClient({
-  invokeUrl: process.env["AMZ_GW_EP"], // REQUIRED
-  region: process.env["AWS_REGION"], // REQUIRED: The region where the API is deployed.
-  accessKey: process.env["AWS_ACCESS_KEY_ID"], // REQUIRED
-  secretKey: process.env["AWS_SECRET_ACCESS_KEY"], // REQUIRED
-});
-
-const getGuacData = (start, end) =>
+const invokeLambda = (lambda, params) =>
   new Promise((resolve, reject) => {
-    apigClient
-      .invokeApi(
-        null,
-        process.env["AMZ_GW_PATH"],
-        "GET",
-        {
-          queryParams: {
-            start,
-            end,
-          },
-        },
-        null
-      )
-      .then(function (result) {
-        return resolve(result);
-      })
-      .catch(function (err) {
-        return reject(err);
-      });
+    lambda.invoke(params, (error, data) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(data);
+      }
+    });
   });
 
-module.exports = {  getGuacData };
+const getGuacData = async (start, end) => {
+  AWS.config.update({
+    accessKeyId: process.env["AWS_ACCESS_KEY_ID"],
+    secretAccessKey: process.env["AWS_SECRET_ACCESS_KEY"],
+    region: process.env["AWS_REGION"],
+  });
+
+  const lambda = new AWS.Lambda();
+
+  const params = {
+    FunctionName: process.env["LAMBDA_NAME"],
+    Payload: JSON.stringify({
+      start,
+      end,
+    }),
+  };
+
+  try {
+    const result = await invokeLambda(lambda, params);
+    if (result?.StatusCode === 200) {
+      return JSON.parse(JSON.parse(result.Payload));
+    }
+    throw new Error("Failed to invoke lambda");
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
+module.exports = { getGuacData };

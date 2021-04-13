@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "aws-api-gateway-client": "^0.3.7",
+    "aws-sdk": "^2.885.0",
     "dotenv": "^8.2.0",
     "mongodb": "^3.6.4",
     "node-fetch": "^2.6.1",

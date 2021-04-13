@@ -41,11 +41,9 @@ async function fetchLanguageData(curTry = 0) {
 
 const transformGuacToWaka = (res) => {
   const {
-    data: {
-      startDate,
-      endDate,
-      languageStats: { percentages },
-    },
+    startDate,
+    endDate,
+    languageStats: { percentages },
   } = res;
   const transformed = percentages.map((l) => ({
     name: l.language,
