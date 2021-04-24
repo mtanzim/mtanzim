@@ -4,6 +4,17 @@ const { fetchLanguageData, parseData, fetchGuacData } = require("./getData");
 const { makePlot } = require("./plotData");
 const { removeOldImages, updateReadme } = require("./manageFiles");
 
+function daysBetween(start, end) {
+  if (start && end) {
+    const oneDay = 24 * 60 * 60 * 1000;
+    const diffDays = Math.round(
+      Math.abs((new Date(start) - new Date(end)) / oneDay)
+    );
+    return diffDays;
+  }
+  return;
+}
+
 async function main() {
   const fetchFn = process.env["IS_GUAC"]
     ? () => {
@@ -16,17 +27,17 @@ async function main() {
       }
     : fetchLanguageData;
 
-  const data = await fetchFn();
-  if (!data) {
+  const { languageStats, startDate, endDate } = await fetchFn();
+  if (!languageStats) {
     throw new Error("Failed to fetch API data!");
   }
-  const parsed = parseData(data);
+  const parsed = parseData(languageStats);
   console.log("API Data Parsed");
   console.log(parsed);
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
   console.log(`Creating plot in ${fileName}`);
-  makePlot(parsed, fileName);
+  makePlot(parsed, fileName, daysBetween(startDate, endDate));
   console.log(`Removing old images`);
   removeOldImages(fileName);
   console.log(`Updating readme`);

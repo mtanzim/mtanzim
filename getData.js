@@ -36,7 +36,7 @@ async function fetchLanguageData(curTry = 0) {
     return fetchLanguageData(curTry + 1);
   }
 
-  return languages;
+  return { languageStats: languages };
 }
 
 const transformGuacToWaka = (res) => {
@@ -52,7 +52,8 @@ const transformGuacToWaka = (res) => {
 
   console.log("Retrieved data from Guac, following are the days available");
   console.log({ startDate, endDate });
-  return transformed;
+
+  return { languageStats: transformed, startDate, endDate };
 };
 
 async function fetchGuacData(start, end) {
