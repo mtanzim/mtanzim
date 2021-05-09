@@ -7,9 +7,10 @@ const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
 const MAX_LANG_COUNT = 5;
-const PLOT_TITLE = "Languages used over the last 30 days";
+const WAKA_DAYS_BETWEEN = 30;
+const isGuac = process.env["IS_GUAC"];
 
-function makePlot(parsedData, fileName) {
+function makePlot(parsedData, fileName, daysBetween) {
   const data = prepareData(parsedData);
   const plotData = {
     labels: data.map((d) => d.name),
@@ -31,7 +32,9 @@ function makePlot(parsedData, fileName) {
     layout: {
       showlegend: false,
       title: {
-        text: PLOT_TITLE,
+        text: `Languages used in the last ${
+          isGuac ? daysBetween : WAKA_DAYS_BETWEEN
+        } days`,
       },
       font: {
         family: "Courier New, monospace",
