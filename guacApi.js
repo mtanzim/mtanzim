@@ -17,21 +17,14 @@ const login = async () => {
   });
   const { token } = await res.json();
   console.log(token);
-  const authHeader = { Authorization: `Bearer ${token}` };
-
-  return authHeader;
+  return { Authorization: `Bearer ${token}` };
 };
 
-const main = async () => {
+const main = async (start, end) => {
   const authHeader = await login();
   console.log(authHeader);
   const res = await fetch(`${URL}/data`, { headers: authHeader });
-  const data = await res.json();
-  //   console.log(JSON.stringify(data, null, 2));
-  const {
-    languageStats: { percentages },
-  } = data;
-  console.log(percentages);
+  return res.json();
 };
 
-main();
+module.exports = { getGuacData: main };

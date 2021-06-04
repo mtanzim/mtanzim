@@ -1,6 +1,6 @@
 const colors = require("./colors");
 const fetch = require("node-fetch");
-const { getGuacData } = require("./guac");
+const { getGuacData } = require("./guacApi");
 
 function parseData(languages) {
   return languages.map((l) => ({
