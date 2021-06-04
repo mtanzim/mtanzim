@@ -11,9 +11,9 @@
 
 - :books: &nbsp; I strive for continuous learning
 
-  - [Self study plan](https://github.com/users/mtanzim/projects/4◊)
+  - [Self study plan](https://github.com/users/mtanzim/projects/4)
   - [Ongoing side projects](https://github.com/users/mtanzim/projects/5)
-  - [Reading List](https://github.com/users/mtanzim/projects/9?fullscreen=true)
+  - [Reading List](https://github.com/users/mtanzim/projects/9)
 
 - :paintbrush: &nbsp; What I'm reading and writing in these days:
 
