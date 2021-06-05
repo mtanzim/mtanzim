@@ -1,17 +1,14 @@
 {
   "dependencies": {
-    "aws-sdk": "^2.885.0",
     "dotenv": "^8.2.0",
-    "mongodb": "^3.6.4",
     "node-fetch": "^2.6.1",
     "plotly": "^1.0.6"
   },
   "scripts": {
-    "start": "node .",
-    "persist": "node persist.js"
+    "start": "node ."
   },
   "name": "mtanzim",
-  "description": "- :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home) - 🔭 &nbsp; A few of my prior professional contributions:",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
