@@ -37,7 +37,10 @@ async function main() {
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
   console.log(`Creating plot in ${fileName}`);
-  makePlot(parsed, fileName, daysBetween(startDate, endDate));
+  const days = daysBetween(startDate, endDate);
+  console.log("Plot dates: ");
+  console.log({ startDate, endDate, days });
+  makePlot(parsed, fileName);
   console.log(`Removing old images`);
   removeOldImages(fileName);
   console.log(`Updating readme`);
