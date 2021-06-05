@@ -7,7 +7,6 @@ const login = async () => {
   const username = process.env["GUAC_USERNAME"];
   const password = process.env["GUAC_USERPASS"];
 
-  console.log({ username, password, url: URL });
   const res = await fetch(`${URL}/login`, {
     method: "POST",
     body: JSON.stringify({
@@ -15,15 +14,21 @@ const login = async () => {
       password,
     }),
   });
+  if (res?.status !== 200) {
+    throw new Error("Failed to authenticate guac user");
+  }
   const { token } = await res.json();
-  console.log(token);
   return { Authorization: `Bearer ${token}` };
 };
 
 const main = async (start, end) => {
   const authHeader = await login();
-  console.log(authHeader);
-  const res = await fetch(`${URL}/data`, { headers: authHeader });
+  const res = await fetch(`${URL}/data?start=${start}&end=${end}`, {
+    headers: authHeader,
+  });
+  if (res?.status !== 200) {
+    throw new Error("Failed to get data from guac api");
+  }
   return res.json();
 };
 
