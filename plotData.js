@@ -9,8 +9,12 @@ const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 const MAX_LANG_COUNT = 5;
 const GUAC_MONTHS = process.env["GUAC_MONTHS"];
 
-// always assumes IS_GUAC=1 now
+const IS_GUAC = process.env["IS_GUAC"];
 function makePlot(parsedData, fileName) {
+  if (IS_GUAC !== "1") {
+    throw new Error("Please configure guac env variables");
+  }
+
   const data = prepareData(parsedData);
   const plotData = {
     labels: data.map((d) => d.name),
