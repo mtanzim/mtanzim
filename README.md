@@ -13,7 +13,7 @@
 
   - [Self study plan](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
-  - [Reading List](https://github.com/users/mtanzim/projects/9)
+  - [Reading list](https://github.com/users/mtanzim/projects/9)
 
 - :paintbrush: &nbsp; What I'm reading and writing in these days:
 
