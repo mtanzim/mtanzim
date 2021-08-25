@@ -6,20 +6,20 @@
 | Project                                                                      | Description                                            |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
 | [Moonfare](https://www.moonfare.com/)                                        | An investment platform for private equity              |
-| [Diginex Access](https://www.diginex.com/diginex-access/)                    | A cryptocurrency data aggregation and trading platform |
+| [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | A cryptocurrency data aggregation and trading platform |
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine       |
 
 - :books: &nbsp; I strive for continuous learning
 
+  - [Reading list](https://github.com/users/mtanzim/projects/9)
   - [Self study plan](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
-  - [Reading list](https://github.com/users/mtanzim/projects/9)
 
 - :paintbrush: &nbsp; What I'm reading and writing in these days:
 
 <!-- START_WAKA -->
 
-![Language Statistics](waka1629919696941.png "Languages")
+![Language Statistics](waka1629919925938.png "Languages")
 
 <!-- END_WAKA -->
 
