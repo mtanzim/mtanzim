@@ -6,7 +6,7 @@ const plotlyApiKey = process.env.PLOTLY_KEY;
 const plotlyApiUser = process.env.PLOTLY_USER;
 const plotly = require("plotly")(plotlyApiUser, plotlyApiKey);
 
-const MAX_LANG_COUNT = 5;
+const MAX_LANG_COUNT = 6;
 const GUAC_MONTHS = process.env["GUAC_MONTHS"];
 
 const IS_GUAC = process.env["IS_GUAC"];
