@@ -12,14 +12,14 @@
 - :books: &nbsp; I strive for continuous learning
 
   - [Reading list](https://github.com/users/mtanzim/projects/9)
-  - [Self study plan](https://github.com/users/mtanzim/projects/4)
+  - [Online courses](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
 
 - :paintbrush: &nbsp; What I'm reading and writing in these days:
 
 <!-- START_WAKA -->
 
-![Language Statistics](waka1639905473935.png "Languages")
+![Language Statistics](waka1640043112146.png "Languages")
 
 <!-- END_WAKA -->
 
