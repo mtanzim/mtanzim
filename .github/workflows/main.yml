@@ -33,6 +33,7 @@ jobs:
           GUAC_URL: ${{secrets.GUAC_URL}}
           GUAC_USERNAME: ${{secrets.GUAC_USERNAME}}
           GUAC_USERPASS: ${{secrets.GUAC_USERPASS}}
+          LANG_COUNT: ${{secrets.LANG_COUNT}}
       - name: Commit and push if changed
         run: |-
           git add .
