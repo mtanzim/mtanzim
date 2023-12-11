@@ -5,7 +5,7 @@
 
 | Project                                                                      | Description                                            |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [CareerFoundry](https://careerfoundry.com/)                                  | Mentoring the next generation of web developers        |
+| [CareerFoundry](https://careerfoundry.com/)                                  | Mentored the next generation of web developers        |
 | [Moonfare](https://www.moonfare.com/)                                        | An investment platform for private equity              |
 | [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | A cryptocurrency data aggregation and trading platform |
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine       |
