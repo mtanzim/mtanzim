@@ -10,6 +10,8 @@
 | [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | A cryptocurrency data aggregation and trading platform |
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | An expat compensation and tax calculation engine       |
 
+- :briefcase: See additional deltails on my [resume](https://mtanzim.com/work/resume.pdf)
+
 - :books: &nbsp; I strive for continuous learning
 
   - [Reading list](https://github.com/users/mtanzim/projects/9)
