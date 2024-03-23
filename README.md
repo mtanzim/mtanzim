@@ -1,10 +1,11 @@
 ### Hi there 👋
 
-- :shopping: &nbsp; Helping North Americans shop smarter through [Flipp](https://flipp.com/home)
+- :brain: Currently, I'm helping [Cohere](https://cohere.com/) empower developers and enterprise customers with AI
 - 🔭 &nbsp; A few of my prior contributions:
 
 | Project                                                                      | Description                                            |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [Flipp](https://flipp.com/home)                                | Helped North Americans shop smarter and save on essential goods        |
 | [CareerFoundry](https://careerfoundry.com/)                                  | Mentored the next generation of web developers        |
 | [Moonfare](https://www.moonfare.com/)                                        | An investment platform for private equity              |
 | [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | A cryptocurrency data aggregation and trading platform |
