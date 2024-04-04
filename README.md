@@ -5,7 +5,7 @@
 
 | Project                                                                      | Description                                            |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [Flipp](https://flipp.com/home)                                | Helped North Americans shop smarter and save on essential goods        |
+| [Flipp](https://flipp.com/home)                                | Built an interactive design tool for digital flyers to help North Americans shop smarter and save on essential goods        |
 | [CareerFoundry](https://careerfoundry.com/)                                  | Mentored the next generation of web developers        |
 | [Moonfare](https://www.moonfare.com/)                                        | An investment platform for private equity              |
 | [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | A cryptocurrency data aggregation and trading platform |
