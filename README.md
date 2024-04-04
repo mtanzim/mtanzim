@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- :brain: Currently, I'm helping [Cohere](https://cohere.com/) empower developers and enterprise customers with AI
+- 🧠 🤖 Currently, I'm [contributing](https://github.com/tanzimcohere) to [Cohere](https://cohere.com/): empowering developers and enterprise customers with AI
 - 🔭 &nbsp; A few of my prior contributions:
 
 | Project                                                                      | Description                                            |
