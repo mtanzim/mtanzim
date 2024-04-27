@@ -3,16 +3,13 @@
 - 🤖 Currently, I'm [contributing](https://github.com/tanzimcohere) to [Cohere](https://cohere.com/): empowering developers and enterprise customers with AI
 - 🔭 &nbsp; A few of my prior contributions:
 
-| Project                                                                      |     | Description                                            |
-| ------------------------------------------------------------------------ | --- | ------------------------------------------------------ |
-| [Flipp](https://flipp.com/home)                                           | 🛍️  | Built an interactive design tool for digital flyers to help North Americans shop smarter and save on essential goods        |
-| [CareerFoundry](https://careerfoundry.com/)                                | 🌱  | Mentored the next generation of web developers        |
-| [Moonfare](https://www.moonfare.com/)                                      | 📈  | An investment platform for private equity              |
-| [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | ⛓️  | A cryptocurrency data aggregation and trading platform |
-| [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | 💼  | An expat compensation and tax calculation engine       |
-
-
-
+| Project                                                                      |     | Description                                                                                                                    |
+| ---------------------------------------------------------------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [Flipp](https://flipp.com/home)                                              | 🛍️  | Built a greenfield interactive design tool for digital flyers to help North Americans shop smarter and save on essential goods |
+| [CareerFoundry](https://careerfoundry.com/)                                  | 🌱  | Mentored the next generation of web developers                                                                                 |
+| [Moonfare](https://www.moonfare.com/)                                        | 📈  | Developed an investment platform for private equity                                                                            |
+| [Diginex Access](https://learn.eqonex.com/news/understanding-diginex-access) | ⛓️  | Developed a cryptocurrency data aggregation and trading platform                                                               |
+| [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | 💼  | Implemented an expat compensation and tax calculation engine                                                                   |
 
 - :briefcase: See additional deltails on my [resume](https://mtanzim.com/work/resume.pdf)
 
