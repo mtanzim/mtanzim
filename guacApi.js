@@ -15,7 +15,7 @@ const login = async () => {
     }),
   });
   if (res?.status !== 200) {
-    console.error(await res?.text())
+    console.error(await res?.text());
     throw new Error("Failed to authenticate guac user");
   }
   const { token } = await res.json();
@@ -33,4 +33,18 @@ const main = async (start, end) => {
   return res.json();
 };
 
-module.exports = { getGuacData: main };
+const mainImage = async (start, end) => {
+  const authHeader = await login();
+  const res = await fetch(
+    `${URL}/plot-image-unauth?start=${start}&end=${end}`,
+    {
+      headers: authHeader,
+    }
+  );
+  if (res?.status !== 200) {
+    throw new Error("Failed to get data from guac api");
+  }
+  return res.buffer();
+};
+
+module.exports = { getGuacData: main, getGuacImage: mainImage };

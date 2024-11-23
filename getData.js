@@ -1,6 +1,6 @@
 const colors = require("./colors");
 const fetch = require("node-fetch");
-const { getGuacData } = require("./guacApi");
+const { getGuacData, getGuacImage } = require("./guacApi");
 
 function parseData(languages) {
   return languages.map((l) => ({
@@ -63,9 +63,16 @@ async function fetchGuacData(start, end) {
   return transformGuacToWaka(res);
 }
 
+async function plotGuac(start, end) {
+  console.log("Requesting data from Guac, following are the days requested");
+  console.log({ startDate: start, endDate: end });
+  return getGuacImage(start, end);
+}
+
 module.exports = {
   parseData,
   fetchLanguageData,
   fetchGuacData,
+  plotGuac,
   fetchData,
 };
