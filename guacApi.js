@@ -15,6 +15,7 @@ const login = async () => {
     }),
   });
   if (res?.status !== 200) {
+    console.error(await res?.text())
     throw new Error("Failed to authenticate guac user");
   }
   const { token } = await res.json();
