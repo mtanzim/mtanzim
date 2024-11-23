@@ -19,13 +19,17 @@
   - [Online courses](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
 
-- :paintbrush: &nbsp; What I'm reading and writing in these days:
 
-<!-- START_WAKA -->
+<!-- START_WAKA //disabled -->
+<!-- - :paintbrush: &nbsp; What I'm reading and writing in these days: -->
 
-![Language Statistics](waka1732339839435.png "Languages")
+<!-- END_WAKA //disabled -->
 
-<!-- END_WAKA -->
+<!-- START_WAKA //disabled -->
+
+<!-- ![Language Statistics](waka1732339839435.png "Languages") -->
+
+<!-- END_WAKA //disabled -->
 
 - ⚡&nbsp; Fun facts:
   - I enjoy travel and [photography](https://mtanzim.com/play/photography/2023/)
