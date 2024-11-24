@@ -43,8 +43,11 @@ const mainImage = async (start, end) => {
     }
   );
   if (res?.status !== 200) {
-    console.error(await res.text());
-    throw new Error("Failed to get data from guac api");
+    throw new Error(
+      `Failed to get data from guac api; status code: ${
+        res?.status
+      }, text: ${await res.text()}`
+    );
   }
   return res.buffer();
 };
