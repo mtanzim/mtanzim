@@ -19,11 +19,11 @@
   - [Online courses](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
 
-:paintbrush: &nbsp; What I'm reading and writing in these days:
+:paintbrush: &nbsp; What I've been reading and writing in the last year:
 
 <!-- START_WAKA -->
 
-![Language Statistics](waka1732414663001.png "Languages")
+![Language Statistics](waka1732422653868.png "Languages")
 
 <!-- END_WAKA -->
 
