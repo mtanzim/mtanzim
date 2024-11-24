@@ -1,8 +1,11 @@
+const fs = require("fs");
+const { Blob } = require("buffer"); // Using Blob from the buffer module if needed
+
 require("dotenv").config();
 
-const { fetchLanguageData, parseData, fetchGuacData } = require("./getData");
-const { makePlot } = require("./plotData");
+const { plotGuac } = require("./getData");
 const { removeOldImages, updateReadme } = require("./manageFiles");
+const process = require("process");
 
 function daysBetween(start, end) {
   if (start && end) {
@@ -16,31 +19,26 @@ function daysBetween(start, end) {
 }
 
 async function main() {
-  const fetchFn = process.env["IS_GUAC"]
-    ? () => {
-        const months = process.env["GUAC_MONTHS"];
-        const today = new Date().toISOString().split("T")[0];
-        let before = new Date();
-        before.setMonth(before.getMonth() - months);
-        before = before.toISOString().split("T")[0];
-        return fetchGuacData(before, today);
-      }
-    : fetchLanguageData;
+  const months = process.env["GUAC_MONTHS"];
+  const today = new Date().toISOString().split("T")[0];
+  let before = new Date();
+  before.setMonth(before.getMonth() - months);
+  before = before.toISOString().split("T")[0];
 
-  const { languageStats, startDate, endDate } = await fetchFn();
-  if (!languageStats) {
-    throw new Error("Failed to fetch API data!");
-  }
-  const parsed = parseData(languageStats);
-  console.log("API Data Parsed");
-  console.log(parsed);
   const ts = Date.now();
   const fileName = `waka${ts}.png`;
   console.log(`Creating plot in ${fileName}`);
-  const days = daysBetween(startDate, endDate);
-  console.log("Plot dates: ");
-  console.log({ startDate, endDate, days });
-  makePlot(parsed, fileName);
+
+  const buffer = await plotGuac(before, today);
+
+  try {
+    fs.writeFileSync(fileName, buffer);
+    console.log("File written successfully:", fileName);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
   console.log(`Removing old images`);
   removeOldImages(fileName);
   console.log(`Updating readme`);

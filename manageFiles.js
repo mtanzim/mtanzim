@@ -18,6 +18,7 @@ function updateReadme(plotFileName) {
 
     fs.writeFile(mdFile, result, "utf8", function (err) {
       if (err) return console.log(err);
+      console.log(`updated readme with ${replacement}`);
     });
   });
 }

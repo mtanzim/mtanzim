@@ -7,7 +7,7 @@ const login = async () => {
   const username = process.env["GUAC_USERNAME"];
   const password = process.env["GUAC_USERPASS"];
 
-  const res = await fetch(`${URL}/login`, {
+  const res = await fetch(`${URL}/api/v1/login`, {
     method: "POST",
     body: JSON.stringify({
       username,
@@ -15,6 +15,7 @@ const login = async () => {
     }),
   });
   if (res?.status !== 200) {
+    console.error(await res?.text());
     throw new Error("Failed to authenticate guac user");
   }
   const { token } = await res.json();
@@ -32,4 +33,23 @@ const main = async (start, end) => {
   return res.json();
 };
 
-module.exports = { getGuacData: main };
+const mainImage = async (start, end) => {
+  const authHeader = await login();
+  const k = process.env?.["LANG_COUNT"] ?? "5";
+  const res = await fetch(
+    `${URL}/plot/v1/pie?start=${start}&end=${end}&topK=${k}`,
+    {
+      headers: authHeader,
+    }
+  );
+  if (res?.status !== 200) {
+    throw new Error(
+      `Failed to get data from guac api; status code: ${
+        res?.status
+      }, text: ${await res.text()}`
+    );
+  }
+  return res.buffer();
+};
+
+module.exports = { getGuacData: main, getGuacImage: mainImage };
