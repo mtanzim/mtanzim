@@ -7,7 +7,7 @@ const login = async () => {
   const username = process.env["GUAC_USERNAME"];
   const password = process.env["GUAC_USERPASS"];
 
-  const res = await fetch(`${URL}/login`, {
+  const res = await fetch(`${URL}/api/v1/login`, {
     method: "POST",
     body: JSON.stringify({
       username,
@@ -35,8 +35,10 @@ const main = async (start, end) => {
 
 const mainImage = async (start, end) => {
   const authHeader = await login();
+  console.log({ authHeader });
+  const k = process.env?.["LANG_COUNT"] ?? "5";
   const res = await fetch(
-    `${URL}/plot-image-unauth?start=${start}&end=${end}`,
+    `${URL}/plot/v1/pie?start=${start}&end=${end}&topK=${k}`,
     {
       headers: authHeader,
     }
