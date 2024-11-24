@@ -19,7 +19,7 @@
   - [Online courses](https://github.com/users/mtanzim/projects/4)
   - [Side projects](https://github.com/users/mtanzim/projects/5)
 
-:paintbrush: &nbsp; What I've been reading and writing in the last year:
+:paintbrush: &nbsp; Languages I've been reading and writing in the last year:
 
 <!-- START_WAKA -->
 
