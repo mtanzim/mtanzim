@@ -21,11 +21,7 @@
 
 :paintbrush: &nbsp; Languages I've been reading and writing in the last year:
 
-<!-- START_WAKA -->
-
-![Language Statistics](waka1732439110010.png "Languages")
-
-<!-- END_WAKA -->
+![Language Statistics](https://storage.googleapis.com/guac-images/guac-pie-plot.png "Languages")
 
 - ⚡&nbsp; Fun facts:
   - I enjoy travel and [photography](https://mtanzim.com/play/photography/2023/)
