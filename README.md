@@ -12,7 +12,7 @@
 | [ReloTalent Salary Calculator](https://www.relotalent.com/salary-calculator) | ✈️  | Implemented an expat compensation and tax calculation engine                                                         |
 
 - :briefcase: See additional deltails on my [resume](https://mtanzim.com/work/resume.pdf)
-
+- 🎤 Check out my talk on [Queues, Tasks and Distributed State Management at Pycascades 2026](https://www.youtube.com/live/CCv4y0B4M84?si=BI3Li4OHGY-Ff_6r&t=9605) with co-speaker [Chantelle](https://github.com/chantelle-cohere)
 - :books: &nbsp; I strive for continuous learning
 
   - [Reading list](https://github.com/users/mtanzim/projects/9)
